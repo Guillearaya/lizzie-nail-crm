@@ -1,8 +1,6 @@
 import streamlit as st
-import gspread
 from datetime import datetime, timedelta
-import re
-import pandas as pd
+
 
 st.set_page_config(page_title="💅 Lizzie Nail CRM", layout="wide")
 
