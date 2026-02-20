@@ -1,0 +1,173 @@
+/* ═══════════════════════════════════════════════════
+   MIS CITAS PAGE STYLES
+   ═══════════════════════════════════════════════════ */
+
+.page {
+    position: relative;
+    min-height: calc(100vh - 80px);
+    padding: var(--space-2xl) 0 var(--space-4xl);
+}
+
+.glow {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(183, 110, 121, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.header p {
+    margin-top: var(--space-sm);
+}
+
+/* ═══ SEARCH ═══ */
+.searchCard {
+    padding: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+}
+
+.searchInner {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.searchIcon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.searchInput {
+    flex: 1;
+    border: none !important;
+    background: transparent !important;
+    font-size: 1.05rem;
+    padding: 0.5rem 0;
+}
+
+.searchInput:focus {
+    box-shadow: none !important;
+}
+
+/* ═══ RESULTS ═══ */
+.results {
+    animation: fadeInUp 0.4s ease-out;
+}
+
+.empty {
+    text-align: center;
+    padding: var(--space-3xl);
+}
+
+.emptyIcon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: var(--space-md);
+}
+
+.empty h3 {
+    font-family: var(--font-display);
+    margin-bottom: var(--space-sm);
+}
+
+/* ═══ APPOINTMENTS LIST ═══ */
+.appointmentsList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.apptCard {
+    padding: var(--space-lg);
+}
+
+.apptPast {
+    opacity: 0.6;
+}
+
+.apptHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.apptDate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50px;
+    flex-shrink: 0;
+}
+
+.apptDay {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--rose-gold-light);
+    line-height: 1;
+}
+
+.apptMonth {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.apptInfo {
+    flex: 1;
+}
+
+.apptInfo h3 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.apptInfo p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.apptActions {
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 768px) {
+    .searchInner {
+        flex-wrap: wrap;
+    }
+
+    .searchIcon {
+        display: none;
+    }
+
+    .searchInput {
+        width: 100%;
+    }
+
+    .apptHeader {
+        flex-wrap: wrap;
+        gap: var(--space-md);
+    }
+}

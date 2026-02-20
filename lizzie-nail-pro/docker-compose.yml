@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  lizzie-nail-pro:
+    build: .
+    container_name: lizzie-nail-app
+    restart: always
+    ports:
+      - "3001:3000" # Mapeamos al puerto 3001 para no chocar con otros sistemas
+    volumes:
+      - ./data:/app/data # Persistencia de la base de datos SQLite
+    environment:
+      - NODE_ENV=production
+      # Aquí podrás agregar variables de entorno para WhatsApp API, etc.
